@@ -214,37 +214,101 @@ h1 {
 }
 
 
+@media screen and (max-width: 1024px) {
+html {
+    font-size: 8px;
+}
 
-@media screen and (max-width: 720px) {
-    html {
-      font-size: 8px;
-    }
-    .slider-wrapper {
-      grid-template-rows: 3fr 40px 40px;
-      grid-template-columns: 1fr;
-      grid-gap: 1rem;
-      grid-template-areas:
-        'content'
-        'control'
-        'description';
-    }
+.container {
+    width: 700px;
+}
 
-    .slider-buttons {
-      justify-content: center;
-    }
-    .slider-buttons label {
-      margin-right: 1.2rem;
-    }
-    .slider-buttons label:last-of-type {
-      margin-right: 0;
-    }
-    .slider-text .slide {
-      text-align: center;
-      padding: 0;
-    }
-    .slider-buttons label::before {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
+.slider-wrapper {
+    grid-template-rows: 3fr 40px 40px;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+    'content'
+    'control'
+    'description';
+}
+
+.slider-buttons {
+    justify-content: center;
+}
+.slider-buttons label {
+    margin-right: 1.2rem;
+}
+.slider-buttons label:last-of-type {
+    margin-right: 0;
+}
+.slider-text .slide {
+    padding: 0;
+}
+.slider-buttons label::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+}
+
+
+@media screen and (max-width: 700px) {
+.container {
+    width: 320px;
+}
+
+.slider-text .slide {
+    padding: 0;
+    font-size: 14px;
+}
+
+.slider-text .slide {
+    display: inline-block;
+    height: 100%;
+    width: 320px;
+    padding-right: 11rem;
+    padding-left: 10px;
+}
+
+.slider-image .slide {
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 320px;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 1rem;
+}
+
+#but2:checked ~ .slider-wrapper-image .slider-image,
+#but2:checked ~ .slider-wrapper-text .slider-text {
+  transform: translateX(-320px);
+}
+
+#but3:checked ~ .slider-wrapper-image .slider-image,
+#but3:checked ~ .slider-wrapper-text .slider-text {
+  transform: translateX(-640px);
+}
+
+#but4:checked ~ .slider-wrapper-image .slider-image,
+#but4:checked ~ .slider-wrapper-text .slider-text {
+  transform: translateX(-960px);
+}
+
+#but5:checked ~ .slider-wrapper-image .slider-image,
+#but5:checked ~ .slider-wrapper-text .slider-text {
+  transform: translateX(-1280px);
+}
+
+#but6:checked ~ .slider-wrapper-image .slider-image,
+#but6:checked ~ .slider-wrapper-text .slider-text {
+  transform: translateX(-1600px);
+}
+
+#but7:checked ~ .slider-wrapper-image .slider-image,
+#but7:checked ~ .slider-wrapper-text .slider-text {
+  transform: translateX(-1920px);
+}
+
+}
